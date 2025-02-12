@@ -1,0 +1,103 @@
+/* Yellow & White Theme Variables */
+:root {
+  --bg-color: #fffde7;        /* Soft pale yellow background */
+  --card-color: #ffffff;      /* Bright white card */
+  --text-color: #fbc02d;      /* Deep yellow text */
+  --button-color: #fdd835;    /* Golden yellow buttons */
+  --button-hover: #f9a825;    /* Deeper yellow-orange hover */
+}
+
+/* Smooth transitions for theme changes */
+body, .timer-container, .buttons button {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.timer-container {
+  background-color: var(--card-color);
+  padding: 20px 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Title & Display */
+h1 {
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.display {
+  font-size: 48px;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  animation: pulse 1s infinite alternate;  /* Pulsing effect */
+}
+
+/* Button Styles */
+.buttons button {
+  background-color: var(--button-color);
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #ffffff;
+  cursor: pointer;
+  margin: 5px;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+/* Button Hover & Active Animation */
+.buttons button:hover {
+  background-color: var(--button-hover);
+}
+
+.buttons button:active {
+  transform: scale(0.95);  /* Button press effect */
+}
+
+/* Input Styles */
+.time-input input {
+  width: 60px;
+  padding: 10px;
+  border: 2px solid var(--button-color);
+  border-radius: 10px;
+  text-align: center;
+  font-size: 24px;
+  background-color: var(--card-color);
+  color: var(--text-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Theme Selector */
+.theme-selector {
+  margin-bottom: 20px;
+}
+
+.theme-selector label, .theme-selector select {
+  color: var(--text-color);
+  font-size: 18px;
+  background-color: var(--card-color);
+  border: 1px solid var(--button-color);
+  border-radius: 8px;
+  padding: 5px;
+}
+
+/* Timer Display Pulse Animation */
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}

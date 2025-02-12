@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cute Timer ⏲️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="timer-container">
+    <h1>Cute Timer ⏱️</h1>
+  
+    <!-- Theme Selector -->
+    <div class="theme-selector">
+      <label for="theme">Theme:</label>
+      <select id="theme">
+        <option value="dark">Dark</option>
+        <option value="light">Light</option>
+        <option value="pastel">Pastel</option>
+      </select>
+    </div>
+  
+    <!-- Custom Time Input -->
+    <div class="time-input">
+      <input type="number" id="minutes" placeholder="MM" min="0" max="99">
+      <span>:</span>
+      <input type="number" id="seconds" placeholder="SS" min="0" max="59">
+    </div>
+  
+    <!-- Timer Display -->
+    <div class="display">00:00</div>
+  
+    <!-- Control Buttons -->
+    <div class="buttons">
+      <button id="start">Start</button>
+      <button id="stop">Stop</button>
+      <button id="reset">Reset</button>
+    </div>
+  </div>
+  
+  
+  <script src="script.js"></script>
+</body>
+</html>
